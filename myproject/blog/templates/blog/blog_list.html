@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <h3>Blog Post</h3>
+        {% for blog in blogs %}
+            
+            <h4><a href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a></h4>
+
+            <p>{{blog.pub_date}}</p>
+            <p>{{ blog.content|truncatewords:30 }}</p>
+        {% endfor %}
+        <hr>
+        
+    </div>
+    <br><br>
+{% endblock %}

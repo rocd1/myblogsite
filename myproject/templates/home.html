@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Blog by Roc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet" href="styles.css">-->
+</head>
+
+<style>
+    /* Custom Styles */
+    body{
+        font-family:  monospace;
+        background-color: rgb(237, 233, 233);
+        
+    }    
+    h1, h3{
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    
+   
+    header{
+        width: 100%;
+        font-weight: normal;
+        font-size: 20px;
+        position: relative;
+        margin: 40px 0;
+    }
+
+    header::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: crimson;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+    }
+
+    @keyframes animate{
+        0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+    }
+    .blog-post{
+        font-size: 3em;
+        font-weight: lighter;
+    }
+
+    
+
+
+</style>
+
+<body>
+
+    <header class="header">
+        <h1 class="text-with-shadow pt-4">MY BLOG</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light box-with-shadow fixed-top" style="background-color: #ad1332;">
+        <a class="navbar-brand text-back font-weight-bold highlight-on-hover" href="https://roc.threadless.com/">ShopOnline</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ko-fi.com/blanknoteswriting">Fund a Project</a>
+                </li>
+            </ul>
+        </div>
+    </nav><br><br>
+
+
+    <div class="row mt-5">
+        <div class="col-md-8 offset-md-2">
+            <blockquote class="blockquote">
+                <p class="mb-0">"Your limitation—it's only your imagination."</p>
+                <footer class="blockquote-footer">Unknown</footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <br><br>
+
+
+
+
+    {% block content %}
+        
+                    
+    {% endblock %}    
+
+    <br><br>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-white">
+        <div class="container-fluid pt-5 pb-7" style="background-color: #121111;">
+            <p>Contact Us</p>
+            <p><i class="fas fa-envelope social-icons"></i> Email: info@example.com</p>
+            <p><i class="fas fa-phone social-icons"></i> Phone: 00000000</p>
+            <p>Follow Us</p>
+            <a href="#" class="social-icons"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icons"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+   
+</body>
+</html>
+
+
+
+
